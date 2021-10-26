@@ -1,4 +1,5 @@
 //your code here
+Particle[] stars = new Particle[20];
 void setup()
 {
   //your code here
@@ -9,8 +10,16 @@ void draw()
   //your code here
   background(51);
   Particle bob = new Particle();
-   bob.move();
+  bob.move();
   bob.show();
+  for(int i = 0; i<stars.length; i++){
+   stars[i] = new Particle(); 
+  }
+  for(int i = 0; i<stars.length; i++){
+   stars[i].move();
+   stars[i].show();
+  }
+  
     
 }
 class Particle
@@ -21,16 +30,16 @@ class Particle
   {
     myX = 200.0;
     myY = 200.0;
-    mySpeed = (Math.random()*10);
+    mySpeed = (Math.random()*30.0);
     myAngle = (Math.random()*(2*Math.PI));
     
   }
   void move(){
-    myX += (Math.cos(myAngle)*mySpeed);
-    myY += (Math.sin(myAngle)*mySpeed);
+    myX += (Math.cos(myAngle))*mySpeed;
+    myY += (Math.sin(myAngle))*mySpeed;
   }
   void show() {
-     fill(0, 0, 0);
+     fill(255);
      ellipse((float)myX, (float)myY, 10.0, 10.0);
   }
   
