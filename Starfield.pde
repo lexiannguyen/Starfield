@@ -13,7 +13,7 @@ void setup()
 void draw()
 {
   //your code here
-  background(51);
+  background(13, 29, 66);
   noStroke();
   
 
