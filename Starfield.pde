@@ -4,17 +4,19 @@ void setup()
 {
   //your code here
   size(400, 400);
+    for(int i = 0; i<stars.length; i++){
+   stars[i] = new Particle(); 
+  }
 }
+
+
 void draw()
 {
   //your code here
   background(51);
-  Particle bob = new Particle();
-  bob.move();
-  bob.show();
-  for(int i = 0; i<stars.length; i++){
-   stars[i] = new Particle(); 
-  }
+  noStroke();
+  
+
   for(int i = 0; i<stars.length; i++){
    stars[i].move();
    stars[i].show();
@@ -26,12 +28,17 @@ class Particle
 {
   //your code here
   double myX, myY, mySpeed, myAngle;
+  float mySize;
   Particle()
   {
     myX = 200.0;
     myY = 200.0;
     mySpeed = (Math.random()*30.0);
     myAngle = (Math.random()*(2*Math.PI));
+    mySize = (float)(Math.random()*15.0)+5.0;
+    
+
+
     
   }
   void move(){
@@ -40,7 +47,7 @@ class Particle
   }
   void show() {
      fill(255);
-     ellipse((float)myX, (float)myY, 10.0, 10.0);
+     ellipse((float)myX, (float)myY, mySize, mySize);
   }
   
 }
