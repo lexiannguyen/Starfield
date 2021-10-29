@@ -1,10 +1,15 @@
 //your code here
-Particle[] stars = new Particle[100];
+Particle[] stars = new Particle[400];
 int[] myColors = {#a2f2b8, #eaf2a2, #f2caa2, #a8edeb, #a8d5ed, #b7b7eb, #d2b7eb, #ebb7eb, #ebb7ba};  
 void setup()
 {
   //your code here
   size(400, 400);
+  /*for(int i = 0; i<50; i++){
+    int bgx = (int)(Math.random()*400);
+    int bgy = (int)(Math.random()*400);
+    ellipse(bgx, bgy, 5, 5);
+  }*/
   for(int i = 0; i<6; i++){
     stars[i] = new OddballParticle();
   }
@@ -16,8 +21,19 @@ void setup()
 void draw()
 {
   //your code here
+  
   background(24, 42, 92);
+  //BABY YODA
+  fill(136, 219, 155);
+  ellipse(200, 370, 100, 70);
+  ellipse(150, 360, 30, 90);
+  fill(212, 166, 121);
+  rect(150, 380, 100, 30);
+  
+  
   noStroke();
+  fill(255);
+  
    /*int tx = 200;
    int ty = 10;
    textAlign(CENTER);
@@ -37,8 +53,10 @@ void draw()
 }
 void mousePressed() {
   for(int i = 0; i<stars.length; i++){
-   stars[i].myX = 200.0;;
-   stars[i].myY = 200.0;
+   stars[i].myX = mouseX;
+   
+   stars[i].myY = mouseY;
+   
   }
   redraw();
 }
@@ -52,18 +70,15 @@ class Particle
   
   Particle()
   {
-    myX = 200.0;
-    myY = 200.0;
+    myX = mouseX;
+    myY = mouseY;
     mySpeed = (Math.random()*60.0);
     myAngle = (Math.random()*(2*Math.PI));
     mySize = (float)(Math.random()*5.0)+1.0;
     
     myColor = (myColors[(int)(Math.random()*myColors.length)]);
    // myColor = color(
-    
 
-
-    
   }
   void move(){
     myX += (Math.cos(myAngle))*mySpeed;
