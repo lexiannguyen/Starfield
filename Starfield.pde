@@ -48,7 +48,17 @@ void draw()
    stars[i].show();
   }
 
-  
+fill(136, 219, 155);
+  ellipse(200, 370, 100, 70);
+  ellipse(150, 360, 90, 30);
+  ellipse(250, 360, 90, 30);
+  fill(255, 196, 220);
+  ellipse(140, 360, 60, 20);
+  ellipse(260, 360, 60, 20);
+  fill(136, 219, 155);
+  ellipse(200, 370, 100, 70);
+  fill(212, 166, 121);
+  rect(150, 380, 100, 30);  
     
 }
 void mousePressed() {
