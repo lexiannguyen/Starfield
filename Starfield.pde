@@ -1,10 +1,12 @@
 //your code here
+PImage img;
 Particle[] stars = new Particle[400];
 int[] myColors = {#a2f2b8, #eaf2a2, #f2caa2, #a8edeb, #a8d5ed, #b7b7eb, #d2b7eb, #ebb7eb, #ebb7ba};  
 void setup()
 {
   //your code here
   size(400, 400);
+  img = loadImage("tie2.png");
   /*for(int i = 0; i<50; i++){
     int bgx = (int)(Math.random()*400);
     int bgy = (int)(Math.random()*400);
@@ -25,7 +27,7 @@ void draw()
   background(24, 42, 92);
 
   
-  
+  //image(img, 200, 200, width/2, height/2);
   noStroke();
   fill(255);
   
@@ -43,17 +45,22 @@ void draw()
    stars[i].show();
   }
 
-fill(136, 219, 155);
-  ellipse(200, 370, 100, 70);
+  fill(136, 219, 155);
+  ellipse(200, 370, 100, 70); //ears and head
   ellipse(150, 360, 90, 30);
   ellipse(250, 360, 90, 30);
-  fill(255, 196, 220);
-  ellipse(140, 360, 60, 20);
+  fill(255, 196, 220); //ears pink
+  ellipse(140, 360, 60, 20); 
   ellipse(260, 360, 60, 20);
   fill(136, 219, 155);
-  ellipse(200, 370, 100, 70);
+  ellipse(200, 370, 100, 70); //head again
+  fill(255, 196, 220); 
+  ellipse(200, 370, 10, 6); //mouth?
   fill(212, 166, 121);
-  rect(150, 380, 100, 30);  
+  rect(150, 380, 100, 30);
+  fill(0, 0, 0);
+  ellipse(180, 360, 18, 13);
+  ellipse(220, 360, 18, 13);
     
 }
 void mousePressed() {
