@@ -23,12 +23,7 @@ void draw()
   //your code here
   
   background(24, 42, 92);
-  //BABY YODA
-  fill(136, 219, 155);
-  ellipse(200, 370, 100, 70);
-  ellipse(150, 360, 30, 90);
-  fill(212, 166, 121);
-  rect(150, 380, 100, 30);
+
   
   
   noStroke();
