@@ -6,7 +6,7 @@ void setup()
 {
   //your code here
   size(400, 400);
-  img = loadImage("tie2.png");
+  img = loadImage("tiefighter.png");
   /*for(int i = 0; i<50; i++){
     int bgx = (int)(Math.random()*400);
     int bgy = (int)(Math.random()*400);
@@ -27,7 +27,7 @@ void draw()
   background(24, 42, 92);
 
   
-  //image(img, 200, 200, width/2, height/2);
+  
   noStroke();
   fill(255);
   
@@ -112,6 +112,9 @@ class OddballParticle extends Particle//inherits from Particle
     myAngle = (Math.random()*(2*Math.PI));
     mySize = (float)(Math.random()*15.0)+30.0;
     myColor = (myColors[(int)(Math.random()*myColors.length)]);
+  }
+  void show(){
+    image(img, myX, myY, width/2, height/2);
   }
     
 }
