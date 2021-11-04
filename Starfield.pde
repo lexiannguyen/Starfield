@@ -114,7 +114,7 @@ class OddballParticle extends Particle//inherits from Particle
     myColor = (myColors[(int)(Math.random()*myColors.length)]);
   }
   void show(){
-    image(img, myX, myY, width/2, height/2);
+    image(img, myX, myY, width/4, height/4);
   }
     
 }
