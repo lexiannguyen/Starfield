@@ -24,7 +24,7 @@ void draw()
 {
   //your code here
   
-  background(24, 42, 92);
+  background(24, 42, 60);
 
   
   
@@ -114,7 +114,7 @@ class OddballParticle extends Particle//inherits from Particle
     myColor = (myColors[(int)(Math.random()*myColors.length)]);
   }
   void show(){
-    image(img, myX, myY, width/4, height/4);
+    image(img, myX, myY, width/6, height/6);
   }
     
 }
