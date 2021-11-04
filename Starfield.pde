@@ -27,7 +27,8 @@ void draw()
   background(24, 42, 60);
 
   
-  
+  for(int i = 0; i<50; i++){
+    ellipse((int)(Math.random()*400), (int)(Math.random()*400), 3, 3);
   noStroke();
   fill(255);
   
